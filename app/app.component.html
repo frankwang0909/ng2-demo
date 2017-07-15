@@ -1,13 +1,17 @@
 <div class="cmp-1">
-  <h1>根组件</h1>
+  <h1>这是父组件</h1>
   <p>
-    嘿嘿，{{ greeting }}！
+    Hello，{{ greeting }}！
     <label>
+      <!-- [(ngModel)] 双向绑定  -->
       <input type="checkbox" [(ngModel)]="isShowMore">
       是否显示详细信息
     </label>
   </p>
   <p highlight *ngIf="isShowMore">Angular 2 是 Google 推出的新一代的Web开发框架</p>
+  <!--[message]属性绑定  -->
+  <!--监听outer事件，$event为消息体，receive（）为接受函数-->
   <my-child [message]="msgToChild" (outer)="receive($event)"></my-child>
+  <!--父组件中存储的从子组件的消息msgFromChild  -->
   <p>从子组件获得的消息：{{ msgFromChild || '暂无' }}</p>
 </div>

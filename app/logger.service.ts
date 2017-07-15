@@ -1,3 +1,4 @@
+//  服务类
 import { Injectable } from '@angular/core';
 
 @Injectable() 

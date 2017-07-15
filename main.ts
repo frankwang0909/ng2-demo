@@ -1,3 +1,4 @@
+// 用来捕获浏览器的异步事件，帮助 ng2 实现高效的变化检测特性
 import 'zone.js';
 
 import 'core-js/es6/reflect';
