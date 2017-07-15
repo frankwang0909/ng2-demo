@@ -5,6 +5,8 @@ import { LoggerService } from './logger.service';
 
 @Component({
   selector: 'my-app',
+  
+  // 引用外部的模板
   templateUrl: './app/app.component.html'
 })
 export class AppComponent {

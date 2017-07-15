@@ -3,14 +3,14 @@
   <p>
     Hello，{{ greeting }}！
     <label>
-      <!-- [(ngModel)] 双向绑定  -->
+      <!-- [(ngModel)] 双向绑定 isShowMore -->
       <input type="checkbox" [(ngModel)]="isShowMore">
       是否显示详细信息
     </label>
   </p>
   <p highlight *ngIf="isShowMore">Angular 2 是 Google 推出的新一代的Web开发框架</p>
-  <!--[message]属性绑定  -->
-  <!--监听outer事件，$event为消息体，receive（）为接受函数-->
+  <!--[message]属性绑定：将父组件类的属性msgToChild绑定到模板中 -->
+  <!--(outer)：绑定outer事件，receive（）为回调函数， $event为消息体，-->
   <my-child [message]="msgToChild" (outer)="receive($event)"></my-child>
   <!--父组件中存储的从子组件的消息msgFromChild  -->
   <p>从子组件获得的消息：{{ msgFromChild || '暂无' }}</p>
